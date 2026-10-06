@@ -34,3 +34,16 @@ if (ex4) {
     document.body.style.backgroundColor = chosenColor;
   });
 }
+
+const ex2 = document.getElementById("ex2_text");
+const ex2_text = document.getElementById("ex2_content");
+
+if (ex2 && ex2_text) {
+  ex2_text.textContent = `Wpisano ${ex2.value.length} znaków`;
+
+  ex2.addEventListener("input", function () {
+    const currentLength = this.value.length;
+
+    ex2_text.textContent = `Wpisano ${currentLength} znaków`;
+  });
+}
