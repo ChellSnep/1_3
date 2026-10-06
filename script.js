@@ -47,3 +47,23 @@ if (ex2 && ex2_text) {
     ex2_text.textContent = `Wpisano ${currentLength} znaków`;
   });
 }
+
+const ex6_Button = document.getElementById("ex6_button");
+const ex6_Content = document.getElementById("ex6_content");
+
+if (ex6_Button && ex6_Content) {
+  let timerInterval = null;
+  let counter = 0;
+
+  ex6_Button.addEventListener("click", function () {
+    if (timerInterval) {
+      clearInterval(timerInterval);
+      timerInterval = null;
+    } else {
+      timerInterval = setInterval(function () {
+        counter++;
+        ex6_Content.textContent = counter;
+      }, 1000);
+    }
+  });
+}
