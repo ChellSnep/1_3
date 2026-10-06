@@ -13,3 +13,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+const ex4 = document.getElementById("ex4_button");
+
+if (ex4) {
+  ex4.addEventListener("click", function () {
+    const colors = [
+      "#f8d7da",
+      "#d4edda",
+      "#d1ecf1",
+      "#fff3cd",
+      "#e2e3e5",
+      "#cce5ff",
+      "#ffffff",
+    ];
+
+    const randomColorIndex = Math.floor(Math.random() * colors.length);
+    const chosenColor = colors[randomColorIndex];
+
+    document.body.style.backgroundColor = chosenColor;
+  });
+}
